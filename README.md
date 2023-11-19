@@ -1,5 +1,5 @@
-# Hangman
-Old school hangman! Programming languages: REACT, TYPESCRIPT
+# A React Typescript fitness app
+Programming languages: REACT, TYPESCRIPT, TAILWIND
 
 ## Description
 
