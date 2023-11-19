@@ -1,20 +1,27 @@
-# A React Typescript fitness app
-Programming languages: REACT, TYPESCRIPT, TAILWIND
+# React + TypeScript + Vite
 
-## Description
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Working with React and TypeScript
+Currently, two official plugins are available:
 
-## Learning goals
-At first, I started with a tutorial refresh my React skills (mixed with TypeScript). During this, I made some [notes](https://github.com/jenniferslagt/hangman/wiki/React-setup) to make sure that I understood the learnings.
-* Building function based components
-* Rendering markup with JSX
-* Managing states
-* Passing input (variables, functions, HTML) via props
-* Looping
-* Handing events
-* Debugging react apps
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Sources
-* [React Tutorial for Beginners](https://www.youtube.com/watch?v=SqcY0GlETPk)
-* [Bootstrap](https://getbootstrap.com/)
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
+```js
+   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+   },
+```
+
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
